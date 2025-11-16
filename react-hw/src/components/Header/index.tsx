@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -9,8 +10,17 @@ export default function Header() {
       </div>
 
       <ul className="header-routing">
-        <li>Home</li>
-        <li>Login</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+
+        <li>
+          <Link to="/items">Wiki</Link>
+        </li>
       </ul>
     </div>
   );

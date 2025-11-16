@@ -45,6 +45,15 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
+.header-routing a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-routing a:hover {
+  color: #00d8ff;
+}
+
 .header-routing li:hover {
   color: #00d8ff;
   transform: translateY(-2px);
