@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth"
 import { auth } from "../config/firebaseConfig";
 import { GoogleAuthProvider } from "firebase/auth/web-extension";
 
@@ -6,8 +6,8 @@ export async function createUser(email: string, password: string) {
   return createUserWithEmailAndPassword(auth ,email, password);
 }
 
-export async function signInWithEmailAndPassword(email: string, password: string) {
-  return signInWithEmailAndPassword(email, password);
+export async function signInWithCredentials(email: string, password: string) {
+  return signInWithEmailAndPassword(auth ,email, password);
 }
 
 export async function signInWithGoogle() {
